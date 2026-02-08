@@ -18,6 +18,8 @@ app.use(express.urlencoded({ extended: true }))
 const authRoutes = require("./routes/authRoutes")
 const userRoutes = require("./routes/userRoutes")
 const caretakerRoutes = require("./routes/caretakerRoutes")
+const questionRoutes = require("./routes/questionRoutes")
+const chatRoutes = require("./routes/chatRoutes")
 
 // Basic route
 app.get("/", (req, res) => {
@@ -32,6 +34,8 @@ app.get("/", (req, res) => {
 app.use("/api/auth", authRoutes)
 app.use("/api/users", userRoutes)
 app.use("/api/caretaker", caretakerRoutes)
+app.use("/api/questions", questionRoutes)
+app.use("/api/chat", chatRoutes)
 
 // 404 handler
 app.use((req, res) => {

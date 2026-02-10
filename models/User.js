@@ -149,7 +149,7 @@ const userSchema = new mongoose.Schema(
 
     currentMood: {
       type: String,
-      enum: ["happy", "sad", "neutral"],
+      enum: ["happy", "sad", "neutral", "stressed", "depressed"],
       default: "neutral",
     },
 
